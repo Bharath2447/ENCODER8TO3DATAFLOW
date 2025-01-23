@@ -45,7 +45,7 @@ Figure 02  Encoder 8 * 3
 
 
 **PROGRAM**
-
+```
 /* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
 module EXP_5(din,a,b,c);
@@ -55,7 +55,7 @@ assign a=(din[4]| din[5]| din[6]| din[7]);
 assign b=(din[2]| din[3]| din[6]| din[7]);
 assign c=(din[1]| din[3]| din[5]| din[7]);
 endmodule
-
+```
 
 Developed by:keerthika A
 
