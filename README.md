@@ -1,5 +1,5 @@
 # Ex.5 ENCODER 8TO3 DATAFLOW Modelling
-# Date :24.10.2024
+# Date : 21.04.2025
 **AIM:**
 
 To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables
@@ -57,9 +57,9 @@ assign c=(din[1]| din[3]| din[5]| din[7]);
 endmodule
 ```
 
-Developed by:keerthika A
+Developed by: Bharath K
 
-RegisterNumber:24900898
+RegisterNumber: 24900579
 
 
 **RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
