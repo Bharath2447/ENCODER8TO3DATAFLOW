@@ -1,14 +1,14 @@
-# Ex.5 ENCODER 8TO3 DATAFLOW Modelling
-# Date : 21.04.2025
-**AIM:**
+### ENCODER 8TO3 DATAFLOW Modelling
+
+*AIM:*
 
 To implement  Encoder 8 To 3 in Dataflow Modelling using verilog and validating their functionality using their functional tables
 
-**SOFTWARE REQUIRED:** Quartus prime
+*SOFTWARE REQUIRED:* Quartus prime
 
-**THEORY**
+*THEORY*
 
-**Encoder 8 To 3**
+*Encoder 8 To 3*
 
 The 8 to 3 line Encoder is also known as Octal to Binary Encoder. In 8 to 3 line encoder, there is a total of eight inputs, i.e., D0, D1, D2, D3, D4, D5, D6, and D7 and three outputs, i.e., A0, A1, and A2. In 8-input lines, one input-line is set to true at a time to get the respective binary code in the output side. Below are the block diagram and the truth table of the 8 to 3 line encoder.
 
@@ -16,7 +16,7 @@ The 8 to 3 line Encoder is also known as Octal to Binary Encoder. In 8 to 3 line
 
 Figure 01  Block Diagram of Encoder 8 * 3
 
-**Truth Table**
+*Truth Table*
 
 ![image](https://github.com/naavaneetha/ENCODER8TO3DATAFLOW/assets/154305477/35496b14-ae6e-4cd1-9abd-d6736b576575)
 
@@ -34,48 +34,50 @@ Logical circuit of the above expressions is given below:
 
 Figure 02  Encoder 8 * 3
 
-**Procedure**
+*Procedure*
 
 /* write all the steps invloved */
-1. Open Quartus II and create a new project wizard in it.
-2. Open verilog HDL file and write the code in it and run the program.
-3. Now, download RTL view of the experiment.
-4. Open new University program VWF and download the waveform screenshot
 
+*PROGRAM*
 
-
-**PROGRAM**
-```
 /* Program for Encoder 8 To 3 in Dataflow Modelling and verify its truth table in quartus using Verilog programming. 
 
-module EXP_5(din,a,b,c);
-input [0:7] din;
-output a,b,c;
-assign a=(din[4]| din[5]| din[6]| din[7]);
-assign b=(din[2]| din[3]| din[6]| din[7]);
-assign c=(din[1]| din[3]| din[5]| din[7]);
+module exp5(a, b, c, y0, y1, y2, y3, y4, y5, y6, y7);
+    input a, b, c;             
+    // 3 input signals
+    
+  output y0, y1, y2, y3, y4, y5, y6, y7; 
+  // 8 output signals
+
+    assign y0 = ~a & ~b & ~c;  // 000
+    assign y1 = ~a & ~b &  c;  // 001
+    assign y2 = ~a &  b & ~c;  // 010
+    assign y3 = ~a &  b &  c;  // 011
+    assign y4 =  a & ~b & ~c;  // 100
+    assign y5 =  a & ~b &  c;  // 101
+    assign y6 =  a &  b & ~c;  // 110
+    assign y7 =  a &  b &  c;  // 111
 endmodule
-```
+
 
 Developed by: Bharath K
 
-RegisterNumber: 24900579
+Register Number: 24900579
 
-
-**RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling**
-
-![Screenshot (19)](https://github.com/user-attachments/assets/141009dc-ad1c-4693-99ec-4693a25d0c22)
-
-
-**TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling**
-
-![Screenshot (20)](https://github.com/user-attachments/assets/7035579d-4275-4b20-bdc5-45ecde618395)
-
-**RESULTS**
-
-Thus the 8:3 Encoder circuit is designed and the truth tables is verified using Quartus software.
+Date: 28/04/2025
 
 
 
+*RTL LOGIC FOR Encoder 8 To 3 in Dataflow Modelling*
+
+![image](https://github.com/user-attachments/assets/06044c08-1a77-4011-a51a-cbcee84e064f)
 
 
+*TIMING DIGRAMS FOR Encoder 8 To 3 in Dataflow Modelling*
+
+![image](https://github.com/user-attachments/assets/962b336e-fd4a-42e8-bf86-1fda89b15e8b)
+
+
+*RESULTS*
+
+Thus Encoder 8 to 3 designed and truthtable is verified.
